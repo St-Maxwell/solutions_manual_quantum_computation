@@ -1,0 +1,35 @@
+\section{Basics of Vectors and Matrices}
+\exercise
+
+要求$\ket{v_1}$和$\ket{v_2}$线性无关，就是要求方程组
+\[
+\begin{pmatrix}
+x & 2 \\
+y & x - y \\
+3 & 1
+\end{pmatrix}
+\begin{pmatrix}
+c_1 \\ c_2
+\end{pmatrix}
+= 0
+\]
+仅存在零解。因此矩阵
+\[
+\begin{pmatrix}
+x & 2 \\
+y & x - y \\
+3 & 1
+\end{pmatrix}
+\]
+是必须是满秩的。将其做初等行变换
+\[
+\begin{pmatrix}
+3 & 1 \\
+0 & x - 6 \\
+0 & 3x - 4y
+\end{pmatrix}
+\]
+所以得到$\ket{v_1}$和$\ket{v_2}$线性无关的条件
+\[
+x \neq 6, \text{且}\ 3x \neq 4y
+\]

@@ -1,0 +1,13 @@
+\documentclass{ctexart}
+\usepackage{amsmath}
+\usepackage{braket}
+
+\newcounter{Emp}[section]
+\renewcommand{\theEmp}{\thesection.\arabic{Emp}}
+\newcommand{\exercise}{\textbf{Exercise}\refstepcounter{Emp}\textbf{\theEmp}\hspace{1em}}
+
+\begin{document}
+
+\include{chap1/chap1}
+
+\end{document}
