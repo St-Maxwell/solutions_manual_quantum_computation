@@ -33,3 +33,46 @@ y & x - y \\
 \[
 x \neq 6, \text{且}\ 3x \neq 4y
 \]
+
+\exercise
+
+证明三个向量$\{\ket{v_i}\}, i = 1, 2, 3$构成$\mathbb{C}^3$的基，只需要证明它们是线性无关的即可。对矩阵
+\[
+\begin{pmatrix}
+1 & 1 & 1 \\
+1 & 0 & -1 \\
+1 & 1 & -1
+\end{pmatrix}
+\]
+做初等行变换得到
+\[
+\begin{pmatrix}
+1 & 1 & 1 \\
+0 & 1 & 2 \\
+0 & 0 & 2
+\end{pmatrix}
+\]
+很明显矩阵是满秩的，说明这组向量是线性无关的。因此向量$\{\ket{v_i}\}, i = 1, 2, 3$构成$\mathbb{C}^3$的基。
+
+\exercise
+\[
+||\ket{x}|| = \left[1 + 1 + (2^2 + 1)\right]^{1/2} = \sqrt{7}
+\]
+\[
+\Braket{x|y} = (2 - i) -i + (2 - i)(2 + i) = 7 - 2i
+\]
+\[
+\Braket{y|x} = (2 + i) + i + (2 - i)(2 + i) = 7 + 2i
+\]
+
+\exercise
+\[
+\begin{split}
+\Braket{x|y} &= \sum\limits_{i=1}^n x_i^* y_i \\
+&= \sum\limits_{i=1}^n (x_i y_i^*)^* \\
+&= \left(\sum\limits_{i=1}^n y_i^* x_i \right)^* \\
+&= \Braket{y|x}^*
+\end{split}
+\]
+
+
