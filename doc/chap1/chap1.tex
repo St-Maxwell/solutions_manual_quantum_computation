@@ -87,29 +87,19 @@ c_2 = \Braket{e_2|v} = \frac{1}{\sqrt{2}}
 
 (1)
 \[
-\ket{e_1} = \frac13 \begin{pmatrix}
--1 \\ 2 \\ 2
-\end{pmatrix}
+\ket{e_1} = \frac13 (-1, 2, 2)^t
 \]
 \[
-\ket{f_2} = \begin{pmatrix}
-2 \\ -1 \\ 2
-\end{pmatrix}
+\ket{f_2} = (2, -1, 2)^t
 \]
 \[
-\ket{e_2} = \frac13 \begin{pmatrix}
-2 \\ -1 \\ 2
-\end{pmatrix}
+\ket{e_2} = \frac13 (2, -1, 2)^t
 \]
 \[
-\ket{f_3} = \begin{pmatrix}
-2 \\ 2 \\ -1
-\end{pmatrix}
+\ket{f_3} = (2, 2, -1)^t
 \]
 \[
-\ket{e_3} = \frac13 \begin{pmatrix}
-2 \\ 2 \\ -1
-\end{pmatrix}
+\ket{e_3} = \frac13 (2, 2, -1)^t
 \]
 
 (2)
@@ -124,4 +114,166 @@ c_3 = \Braket{e_3|u} = -3
 \]
 
 \exercise
+\[
+\ket{e_1} = \frac{\ket{v_1}}{||\ket{v_1}||} = \frac{\sqrt{3}}{3}(1,i,1)^t
+\]
+\[
+\ket{f_2} = (2, 1-i, i-1)^t
+\]
+\[
+\ket{e_2} = 2\sqrt{2}(2, 1-i, i-1)^t
+\]
+
+\exercise
+\[
+[(cA)^\dagger]_{jk} = (cA)_{kj}^* = c^* A_{kj}^* = c^* (A^\dagger)_{jk} \rightarrow (cA^\dagger) = c^* A^\dagger
+\]
+\[
+[(A+B)^\dagger]_{jk} = (A+B)_{kj}^* = A_{kj}^* + B_{kj}^* = (A^\dagger)_{jk} + (B^\dagger)_{jk} \rightarrow (A+B)^\dagger = A^\dagger + B^\dagger
+\]
+\[
+\begin{split}
+[(AB)^\dagger]_{jk} &= (AB)_{kj}^* = \Big(\sum\limits_i A_{ki}B_{ij}\Big)^* \\
+&= \sum\limits_i A_{ki}^*B_{ij}^* = \sum\limits_i (A^\dagger)_{ik}(B^\dagger)_{ji} \\
+&= (B^\dagger A^\dagger)_{jk}
+\end{split} \rightarrow (AB)^\dagger = B^\dagger A^\dagger
+\]
+
+\exercise
+\[
+\text{det}
+\begin{vmatrix}
+-\lambda & \frac{1+i}{\sqrt{2}} \\ \frac{1-i}{\sqrt{2}} & -\lambda
+\end{vmatrix}
+= 0 \rightarrow \lambda^2 = 1
+\]
+$A$的本征值为$\pm 1$。对于$\lambda_1=1$
+\[
+\frac{1}{\sqrt{2}}
+\begin{pmatrix}
+0 & 1+i \\ 1-i & 0
+\end{pmatrix}
+\begin{pmatrix}
+v_1 \\ v_2
+\end{pmatrix}
+=
+\begin{pmatrix}
+v_1 \\ v_2
+\end{pmatrix}
+\]
+再结合$|v_1|^2+|v_2|^2=1$，得到本征矢
+\[
+\ket{\lambda_1} = \frac{1}{2}(\sqrt{2}, 1-i)^t
+\]
+对于$\lambda_2=-1$，得到本征矢
+\[
+\ket{\lambda_2} = \frac{1}{2}(\sqrt{2}, i-1)^t
+\]
+\[
+\Braket{\lambda_1|\lambda_2} = \frac14 (2-2) = 0
+\]
+\[
+\ket{\lambda_1}\bra{\lambda_1} + \ket{\lambda_2}\bra{\lambda_2} = \frac14
+\begin{pmatrix}
+2 & \sqrt{2}(1+i) \\ \sqrt{2}(1-i) & 2
+\end{pmatrix}
++ \frac14
+\begin{pmatrix}
+2 & -\sqrt{2}(1+i) \\ \sqrt{2}(i-1) & 2
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 \\ 0 & 1
+\end{pmatrix}
+\]
+使得$A$对角化的酉矩阵为
+\[
+\frac12
+\begin{pmatrix}
+\sqrt{2} & \sqrt{2} \\
+1-i & i - 1
+\end{pmatrix}
+\]
+
+\exercise
+
+问题(1)：首先从$A$的本征值方程出发
+\[
+A\ket{\lambda_i} = \lambda_i\ket{\lambda_i} \rightarrow \bra{\lambda_i}A^\dagger = \lambda_i^*\bra{\lambda_i} \rightarrow -\bra{\lambda_i}A = \lambda_i^*\bra{\lambda_i}
+\]
+两边同时与$\ket{\lambda_i}$内积
+\[
+-\Braket{\lambda_i|A|\lambda_i} = \lambda_i^*\Braket{\lambda_i|\lambda_i} \rightarrow -\lambda_i = \lambda_i^*
+\]
+显然$\lambda_i$是纯虚数。
+
+
+问题(2)：同样是算符$U$的本征方程
+\[
+U\ket{\lambda_i} = \lambda_i\ket{\lambda_i} \rightarrow \bra{\lambda_i}U^\dagger = \lambda_i^*\bra{\lambda_i}
+\]
+将两个式子结合在一起得到
+\[
+\Braket{\lambda_i|U^\dagger U|\lambda_i} = \lambda_i^*\lambda_i\Braket{\lambda_i|\lambda_i} \rightarrow \Braket{\lambda_i|\lambda_i} = \lambda_i^*\lambda_i\Braket{\lambda_i|\lambda_i} \rightarrow |\lambda|^2 = 1
+\]
+
+问题(3)：若$A$是Hermitian矩阵，则$A$显然是正规矩阵，本征值为实数。反之，若$A$的本征值为实数，则
+\[
+(A-\lambda_i)\ket{\lambda_i} = 0 \rightarrow \bra{\lambda_i}(A^\dagger-\lambda_i) = 0
+\]
+再结合对易关系$[A^\dagger, A]=0$
+\[
+\Braket{\lambda_i|(A^\dagger-\lambda_i)(A-\lambda_i)|\lambda_i} = \Braket{\lambda_i|(A-\lambda_i)(A^\dagger-\lambda_i)|\lambda_i} = 0
+\]
+可得到
+\[
+A^\dagger\ket{\lambda_i} = \lambda_i\ket{\lambda_i}
+\]
+所以$A^\dagger=A$，$A$是Hermitian矩阵。
+
+\exercise
+
+将矩阵的基$\{1,2,3\}$轮换为$\{2,3,1\}$，得到矩阵
+\[
+U^\prime =
+\begin{pmatrix}
+i & 0 & 0 \\ 0 & 0 & i \\ 0 & i & 0
+\end{pmatrix}
+\]
+显然这个矩阵具有块对角的形式，其中$2\times 2$部分是$i\sigma_x$。因此本征值分别为$i, i, -i$，（未归一化的）本征矢分别为
+\[
+(1,0,0)^t,\quad (0,1,1)^t,\quad (0,1,-1)^t
+\]
+而$U$的本征矢需要将基重新轮换回去，并且归一化
+\[
+(0,1,0)^t,\quad \frac{1}{\sqrt{2}}(1,0,1)^t,\quad \frac{1}{\sqrt{2}}(-1,0,1)^t
+\]
+
+\exercise
+
+已知$H$是Hermitian矩阵
+\[
+H\ket{\lambda_j} = \lambda_j\ket{\lambda_j}
+\]
+容易证明
+\begin{align*}
+(I+iH)\ket{\lambda_j} &= (1+i\lambda_j)\ket{\lambda_j} \\
+(I-iH)\ket{\lambda_j} &= (1-i\lambda_j)\ket{\lambda_j} \\
+(I+iH)^{-1}\ket{\lambda_j} &= (1+i\lambda_j)^{-1}\ket{\lambda_j} \\
+(I-iH)^{-1}\ket{\lambda_j} &= (1-i\lambda_j)^{-1}\ket{\lambda_j}
+\end{align*}
+我们考虑$U^{-1}$和$U^\dagger$作用在任意向量上
+\[
+\begin{split}
+U^{-1}\ket{v} &= (I-iH)(I+iH)^{-1}\ket{v} = \sum\limits_j (I-iH)(I+iH)^{-1}\ket{\lambda_j}\Braket{\lambda_j|v} \\
+&= \sum\limits_j (1-i\lambda_j)(1+i\lambda_j)^{-1}\ket{\lambda_j}\Braket{\lambda_j|v}
+\end{split}
+\]
+\[
+\begin{split}
+U^\dagger\ket{v} &= (I+iH)^{-1}(I-iH)\ket{v} = \sum\limits_j (I+iH)^{-1}(I-iH)\ket{\lambda_j}\Braket{\lambda_j|v} \\
+&= \sum\limits_j (1+i\lambda_j)^{-1}(1-i\lambda_j)\ket{\lambda_j}\Braket{\lambda_j|v}
+\end{split}
+\]
+显然$U^{-1}\ket{v}=U^\dagger\ket{v}$，所以$U$是酉矩阵。
 
